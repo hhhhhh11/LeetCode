@@ -4,7 +4,13 @@ public class XOROperationInAnArray {
 
 
     public int xorOperation(int n, int start) {
-
+        int[] nums  = new int[n];
+        int result = start;
+        for (int i = 1; i < n; i++) {
+            nums[i] = start + 2*i;
+            result = result^nums[i];
+        }
+        return result;
     }
 //    1486. 数组异或操作
 //    给你两个整数，n 和 start 。
